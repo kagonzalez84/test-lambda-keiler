@@ -1,0 +1,3 @@
+[submodule "plugins_dev/serverless-build-plugin"]
+	path = plugins_dev/serverless-build-plugin
+	url = git@github.com:kagonzalez84/serverless-build-plugin.git

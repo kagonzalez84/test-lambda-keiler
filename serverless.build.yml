@@ -1,0 +1,29 @@
+method: "bundle"
+
+sourceMaps : false
+babel      : true # Will use ./.babelrc
+uglify     : false # Will use defaults
+
+exclude:
+  - "*" # Ignores the root directory
+
+modules:
+  exclude: # excluded from the root node_modules
+    - aws-sdk
+
+  deepExclude: # excluded from nested node_modules
+    - aws-sdk
+
+functions:
+  validator:
+    include:
+      - "functions/validator/**"
+      - "lib/**"
+    exclude:
+      - "**/*.json"
+  validator2:
+    include:
+      - "functions/validator2/**"
+      - "lib/**"
+    exclude:
+      - "**/*.json"
